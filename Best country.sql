@@ -1,2 +1,3 @@
-select distinct BillingCountry, sum(total) as invoice from invoices
-order by Total;
+select BillingCountry, count(total) as invoice from invoices
+group by BillingCountry
+order by invoice desc;
